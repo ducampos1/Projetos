@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna Eletrônica</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="./justicaeleitoral.png" id="telaInicial" alt= "Justiça Eleitoral">
+    <button id="btn-telaInicial" alt="Aperte qualquer botão para iniciar" onclick="iniciarVotacao()"></button>
+    <div class="urna">
+        <div class="tela">
+            <div class="tela-1">
+                <div class="tela-1-esq">
+                    <div class="tela-1-esq-seuVoto">
+                        <p>SEU VOTO PARA:</p>
+                    </div>
+                    <div class="tela-1-esq-titulo">
+                        <p id="vereador">VEREADOR</p>
+                    </div>
+                    <div class="tela-1-esq-num">
+                        <div class="numero pisca"></div>
+                        <div class="numero"></div>
+                    </div>
+                    <div class="tela-1-esq-desc"></div>
+                </div>
+                
+                <div class="tela-1-dir">
+                    <div class="div-1-dir-image">
+                        
+                    </div>
+                    <div class="div-1-dir-image small">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="tela-2">
+                Aperte a tecla:<br/>
+                CONFIRMA para CONFIRMAR seu voto<br/>
+                CORRIGE para REINICIAR este voto<br/>
+
+            </div>
+        </div>
+        <div class="teclado">
+            <div class="teclado-linha">
+                <button class="btn-urna" onclick="clicou('1')">1</button>
+                <button class="btn-urna" onclick="clicou('2')">2</button>
+                <button class="btn-urna" onclick="clicou('3')">3</button>
+            </div>
+            <div class="teclado-linha">
+                <button class="btn-urna" onclick="clicou('4')">4</button>
+                <button class="btn-urna" onclick="clicou('5')">5</button>
+                <button class="btn-urna" onclick="clicou('6')">6</button>
+            </div>
+            <div class="teclado-linha">
+                <button class="btn-urna" onclick="clicou('7')">7</button>
+                <button class="btn-urna" onclick="clicou('8')">8</button>
+                <button class="btn-urna" onclick="clicou('9')">9</button>
+            </div>
+            <div class="teclado-linha">
+                    <button class="btn-urna" onclick="clicou('0')">0</button>
+            </div>
+            <div class="teclado-linha">
+                <button class="btn-urna btn-branco" onclick="branco()">BRANCO</button>
+                <button class="btn-urna btn-corrige" onclick="corrige()">CORRIGE</button>
+                <button class="btn-urna btn-confirma" onclick="confirma()">CONFIRMA</button>
+            </div>
+            
+        </div>
+    </div>
+    <button class="custom-btn btn-3" id='btn' onclick="window.location.reload()"><span>Reiniciar</span></button>
+    <script src="etapas.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
