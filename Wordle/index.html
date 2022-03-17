@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruzeir.ooo</title>
+    <script src="script.js"></script>
+    <script src="possiveisPalavras.js"></script>
+    <script src="possiveisNomes.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="container">
+        <div id="overlay-dicas"></div>
+        <div tabindex="0" id="stats">
+            <button id="btn-fechar">X</button>
+            <div id="jogo-concluido">
+                <h2 id="parabens">Parabéns!</h2>
+                <p id="sobre-o-jogador">O jogador de hoje é o: <strong id="jogadorDeHoje">JOGADOR</strong> </p>
+            </div>
+            <h2>progresso</h2>
+            <div id="statstable">
+              <b id="stats_games">11</b>
+              <b id="stats_pct">100%</b>
+              <b id="stats_streak">11</b>
+              <b id="stats_maxstreak">11</b>
+            </div>
+            <div id="statstable2">
+                <p>jogos</p>
+                <p>de vitórias</p>
+                <p>sequência<br>de vitórias</p>
+                <p>melhor<br>sequência</p>
+              </div>            
+              <button id="jogarNovamente">Jogar de novo!</button>
+            </div>
+        <div id="game">
+            <header>                
+                <div id="header-cima">                
+                <img id="escudo" alt="CRUZEIRO" src="https://upload.wikimedia.org/wikipedia/pt/f/fa/CruzeiroEC2021.png">
+                <h1 class="titulo">CRUZEIR.OOO</h1>
+                <div id="numero-dica">
+                <img src="./lampada1.jpg" alt="dica 1" id="dica1" class="animate__animated dicas">                
+                <img src="./lampada2.jpg" alt="dica 2" id="dica2" class="animate__animated dicas">  
+                <img src="./menu-icon.jpg" alt="" id="icon-menu">             
+                </div>
+                </div>
+                <div id="header-baixo">
+                    <p id="dica1-texto" class="animate__animated dicas-texto-c">Dica liberada após a 2ª tentativa</p>
+                    <p id="dica2-texto" class="animate__animated dicas-texto-c">Dica liberada após a 4ª tentativa</p>
+                    <p id="aviso" class="animate__animated">Esta não é uma opção válida</p>
+                    <img src="./orient.jpg" alt="Sobre o jogo" id="sobre-o-jogo">
+                </div>
+            </header>
+
+            <div id="board-container">
+                <section id="menu">
+                    <SECTION id="s-comojogar">
+                        <p class="it-menu" id="como-jogar">Como jogar</p>
+                    </SECTION>
+                    <section id="s-estatisticas">
+                        <p class="it-menu" id="estatisticas">Estatísticas</p>
+                    </section>
+                    <section id="s-creditos">
+                        <p class="it-menu" id="creditos">Sobre</p>
+                    </section>
+                </section>
+                <div id="board"></div>
+
+            </div>
+            <div id="keyboard-container">
+                <div id="block"></div>
+                <div class="keyboard-row">
+                    <button id="q" class="animate__animated" data-key="q">q</button>
+                    <button id="w" class="animate__animated" data-key="w">w</button>
+                    <button id="e" class="animate__animated" data-key="e">e</button>
+                    <button id="r" class="animate__animated" data-key="r">r</button>
+                    <button id="t" class="animate__animated" data-key="t">t</button>
+                    <button id="y" class="animate__animated" data-key="y">y</button>
+                    <button id="u" class="animate__animated" data-key="u">u</button>
+                    <button id="i" class="animate__animated" data-key="i">i</button>
+                    <button id="o" class="animate__animated" data-key="o">o</button>
+                    <button id="p" class="animate__animated" data-key="p">p</button>
+                </div>
+                <div class="keyboard-row">
+                    <div class="spacer-half"></div>
+                    <button id="a" class="animate__animated" data-key="a">a</button>
+                    <button id="s" class="animate__animated" data-key="s">s</button>
+                    <button id="d" class="animate__animated" data-key="d">d</button>
+                    <button id="f" class="animate__animated" data-key="f">f</button>
+                    <button id="g" class="animate__animated" data-key="g">g</button>
+                    <button id="h" class="animate__animated" data-key="h">h</button>
+                    <button id="j" class="animate__animated" data-key="j">j</button>
+                    <button id="k" class="animate__animated" data-key="k">k</button>
+                    <button id="l" class="animate__animated" data-key="l">l</button>
+                    <button id="del" class="animate__animated" data-key="del" class="wide-button">Del</button>
+                    
+                </div>
+                <div class="keyboard-row">
+                    <div class="spacer-half"></div>
+                    <button id="z" class="animate__animated" data-key="z">z</button>
+                    <button id="x" class="animate__animated" data-key="x">x</button>
+                    <button id="c" class="animate__animated" data-key="c">c</button>
+                    <button id="v" class="animate__animated" data-key="v">v</button>
+                    <button id="b" class="animate__animated" data-key="b">b</button>
+                    <button id="n" class="animate__animated" data-key="n">n</button>
+                    <button id="m" class="animate__animated" data-key="m">m</button>                        
+                    <div class="spacer-half"></div>
+                    <button id="enter" class="animate__animated" data-key="enter" class="wide-button">Enter</button>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
